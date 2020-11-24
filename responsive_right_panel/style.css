@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.left {
+    width: 100%;
+    background-color: lavender;
+}
+
+.right {
+    max-height: 100vh;
+    display: flex;
+    position: relative;
+    left: auto;
+    right: 0;
+    transition-property: left, right;
+    transition-duration: .4s;
+}
+
+.right.visible {
+    right: 0;
+}
+
+.right__toggle {
+    display: none;
+    width: 20px;
+    background: grey;
+}
+
+.right__panel {
+    width: 300px;
+    background-color: lightcoral;
+    overflow-y: auto;
+}
+
+@media screen and (max-width: 992px) {
+    .right__toggle {
+        display: block;
+    }
+
+    .right {
+        position: absolute;
+        top: 0;
+        left: auto;
+        right: -300px;
+    }
+}
