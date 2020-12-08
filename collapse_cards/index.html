@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="card" id="card-1">
+          <div class="card__head">
+            <h3>Card 1</h3>
+            <div class="card__toggle-btn active"></div>
+          </div>
+          <div class="card__body visible">
+            <div class="card__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo reiciendis quas aspernatur? Labore, beatae veniam, 
+              consequuntur officiis ab voluptas fugit minima dolor temporibus molestias, perferendis ducimus et excepturi repellat obcaecati!
+            </div>
+          </div>
+        </div>
+        <div class="card" id="card-2">
+          <div class="card__head">
+            <h3>Card 2</h3>
+            <div class="card__toggle-btn active"></div>
+          </div>
+          <div class="card__body visible">
+            <div class="card__text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae sunt neque quod minima ratione. Sequi adipisci ipsa 
+              eveniet esse totam quaerat non mollitia nam amet veniam sunt dignissimos quos facere enim quia error, delectus vitae veritatis aliquam unde voluptas. A?
+            </div>
+          </div>
+        </div>
+        <div class="card" id="card-3">
+          <div class="card__head">
+            <h3>Card 3</h3>
+            <div class="card__toggle-btn active"></div>
+          </div>
+          <div class="card__body visible">
+            <div class="card__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatum maiores similique sit minus, delectus nemo rem saepe 
+              distinctio deleniti repellendus quidem voluptate doloribus ipsum quas aspernatur sed nam dolorum illum voluptas, corporis non maxime veniam! Unde dolores officiis aspernatur?
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        document.querySelector('#card-1 > div> .card__toggle-btn').addEventListener('click', () => {
+          document.querySelector('#card-1 > div> .card__toggle-btn').classList.toggle('active');
+          document.querySelector('#card-1 > .card__body').classList.toggle('visible');
+        });
+
+        document.querySelector('#card-2 > div> .card__toggle-btn').addEventListener('click', () => {
+          document.querySelector('#card-2 > div> .card__toggle-btn').classList.toggle('active');
+          document.querySelector('#card-2 > .card__body').classList.toggle('visible');
+        });
+
+        document.querySelector('#card-3 > div> .card__toggle-btn').addEventListener('click', () => {
+          document.querySelector('#card-3 > div> .card__toggle-btn').classList.toggle('active');
+          document.querySelector('#card-3 > .card__body').classList.toggle('visible');
+        });
+    </script>
+</body>
+</html>
