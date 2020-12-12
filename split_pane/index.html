@@ -14,7 +14,7 @@
             <img src="img-color.jpeg" class="img">
           </div>
           <div class="img__container" id="img-2-ct">
-            <img src="img-nb.jpeg" class="img" id="img-2">
+            <img src="img-nb.jpeg" class="img">
           </div>
         </div>
       </div>
@@ -22,12 +22,10 @@
     <script>
         const imgWrapper = document.getElementById('img-wrapper');
         const img2Ct = document.getElementById('img-2-ct');
-        const img2 = document.getElementById('img-2');
 
         const handleMouseMove = e => {
           const x = (e.pageX - imgWrapper.getBoundingClientRect().x);
           img2Ct.style.width = `${x}px`;
-          img2.style.width = `${imgWrapper.offsetWidth + x}px`;
         }
 
         imgWrapper.addEventListener('mouseover', () => {
