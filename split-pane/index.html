@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Split pane</title>
+</head>
+<body>
+    <div class="wrapper">
+      <div class="container">
+        <div class="img__wrapper" id="img-wrapper">
+          <div class="img__container">
+            <img src="img-color.jpeg" class="img">
+          </div>
+          <div class="img__container" id="img-2-ct">
+            <img src="img-nb.jpeg" class="img" id="img-2">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        const imgWrapper = document.getElementById('img-wrapper');
+        const img2Ct = document.getElementById('img-2-ct');
+        const img2 = document.getElementById('img-2');
+
+        const handleMouseMove = e => {
+          const x = (e.pageX - imgWrapper.getBoundingClientRect().x);
+          img2Ct.style.width = `${x}px`;
+          img2.style.width = `${imgWrapper.offsetWidth + x}px)`;
+        }
+
+        imgWrapper.addEventListener('mouseover', () => {
+          imgWrapper.addEventListener('mousemove', handleMouseMove);
+        });
+
+        imgWrapper.addEventListener('mouseout', () => {
+          imgWrapper.removeEventListener('mousemove', handleMouseMove);
+        });
+    </script>
+</body>
+</html>
